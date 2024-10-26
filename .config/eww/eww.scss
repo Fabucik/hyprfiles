@@ -1,0 +1,41 @@
+@import "colors";
+
+* {
+    all: unset;
+    font-family: 'FiraCode Nerd Font';
+    font-size: 70px;
+}
+
+.powermenu {
+    border: 1.5px solid $color9;
+    background-color: $background;
+    border-radius: 8px;
+}
+
+.cancel {
+    color: $color3;
+    margin-left: 20px;
+}
+
+.poweroff {
+    color: $color5;
+    margin-left: 60px;
+}
+
+.reboot {
+    color: $color10;
+    margin-left: 50px;
+}
+
+.lock {
+    color: $color11;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.cancel:hover,
+.poweroff:hover,
+.reboot:hover,
+.lock:hover {
+    color: $foreground;
+}

@@ -1,0 +1,61 @@
+@import "~/.cache/wal/colors-rofi.rasi"
+
+* {
+	font: "FiraCode Nerd Font Mono Regular 12";
+}
+
+configuration {
+	show-icons: true;
+}
+
+window {
+	location: center;
+	width: 800px;
+	height: 500px;
+	padding: 50px;
+	border-radius: 7px;
+	border: 2px solid;
+}
+
+mainbox {
+	enabled: true;
+	spacing: 40px;
+	padding: 0px;
+	children: ["inputbar", "listview"];
+}
+
+inputbar {
+	border: 1px solid;
+	border-radius: 7px;
+
+	padding: 10px;
+	margin: 0 150px;
+
+	children: ["entry"];
+}
+
+entry {
+	placeholder: "Search";
+}
+
+listview {
+	columns: 2;
+	border: 0px solid;
+	spacing: 10px;
+	fixed-columns: true;
+	layout: vertical;
+	scrollbar: false;
+	dynamic: true;
+}
+
+element {
+	spacing: 10px;
+	padding: 10px;
+	border: 0px solid;
+	border-radius: 7px;
+	children: ["element-icon", "element-text"];
+}
+
+element selected.normal {
+	border: 1px solid;
+}

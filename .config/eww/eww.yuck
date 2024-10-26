@@ -1,0 +1,20 @@
+(defwindow powermenu
+    :monitor 0
+    :geometry   (geometry   :x "0%"
+                            :y "0%"
+                            :width "400px"
+                            :height "20%"
+                            :anchor "center")
+    :stacking "fg"
+(buttons-menu))
+
+(defwidget buttons-menu []
+    (box :class "container" :orientation "horizontal" :hexpand true :halign "fill" :space-evenly false
+        (button :class "cancel" :onclick "eww close powermenu"
+            "")
+        (button :class "poweroff" :onclick "poweroff"
+            "󰐥")
+        (button :class "reboot" :onclick "reboot"
+            "󰜉")
+        (button :class "lock" :onclick "hyprctl dispatch exec hyprlock; eww close powermenu"
+            "󰗽")))

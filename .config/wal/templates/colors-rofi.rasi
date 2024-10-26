@@ -1,0 +1,39 @@
+window {{
+	background-color: {background};
+	border-color: {color9};
+}}
+
+mainbox {{
+	background-color: inherit;
+}}
+
+inputbar {{
+	border-color: {color7};
+}}
+
+entry {{
+	text-color: {foreground};
+	cursor-color: {foreground};
+	placeholder-color: {color1};
+}}
+
+element {{
+	background-color: {background};
+}}
+
+element normal.normal {{
+	background-color: inherit;
+	text-color: {color6};
+}}
+
+element alternate.normal {{
+	background-color: inherit;
+	text-color: {color6};
+}}
+
+element selected.normal {{
+	border: 1px solid;
+	border-color: {color13};
+	background-color: inherit;
+	text-color: {color15};
+}}

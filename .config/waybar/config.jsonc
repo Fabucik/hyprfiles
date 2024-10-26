@@ -1,0 +1,103 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 35, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    "margin": "10 10 0 10", //"10 20 0 20",
+    // Choose the order of the modules
+    "modules-left": [
+        "custom/menu",
+        "custom/separator",
+        "cpu",
+        "memory",
+        "battery",
+        "custom/separator",
+        "custom/wallpaper",
+        "custom/separator",
+        // "custom/vpn",
+        // "custom/separator",
+        "tray"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "custom/spotify",
+        "custom/separator",
+        "pulseaudio",
+        "pulseaudio/slider",
+        "custom/separator",
+        "clock"
+    ],
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "format": "{icon}",
+        "format-icons": {
+            "default": "󰯉",
+            "active": ""
+        }
+    },
+    "tray": {
+        "spacing": 15
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": " {}%",
+        "tooltip": false
+    },
+    "battery": {
+        "bat": "BAT0",
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰂃", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format-charging": "󰂄 {capacity}%",
+        "interval": 10
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "format-muted": "󰝟  {volume}%"
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+    "clock": {
+        "format": "{:%H:%M:%S}",
+        "interval": 1,
+        "tooltip": true,
+        "tooltip-format": "{:%d. %m. %Y}"
+    },
+    "custom/menu": {
+        "format": "󰣇",
+        "on-click": "eww open powermenu",
+        "tooltip": false
+    },
+    "custom/separator": {
+        "format": "|",
+        "tooltip": false
+    },
+    "custom/wallpaper": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "nohup /home/fanda/Scripts/wallpaper.sh >/dev/null 2>&1 &"
+    },
+    "custom/spotify": {
+        "exec": "/home/fanda/.config/waybar/scripts/player.py",
+        "interval": 3,
+        "format": "  {}",
+        "tooltip": false
+    },
+    "custom/vpn": {
+        "format": "󰒄 ",
+        "tooltip": false,
+        "on-click": "/home/fanda/Scripts/vpn.sh"
+    }
+}

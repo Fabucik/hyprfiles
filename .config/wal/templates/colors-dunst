@@ -1,0 +1,18 @@
+[global]
+    frame_color = "{color9}"
+
+[urgency_low]
+    background = "{background}"
+    foreground = "{foreground}"
+    timeout = 10
+
+[urgency_normal]
+    background = "{background}"
+    foreground = "{foreground}"
+    timeout = 10
+
+[urgency_critical]
+    background = "{background}"
+    foreground = "{foreground}"
+    frame_color = "{color6}"
+

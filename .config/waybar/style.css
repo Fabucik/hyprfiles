@@ -1,0 +1,136 @@
+@import url("/home/fanda/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: 'FiraCode Nerd Font';
+    font-size: 14;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: @background;
+    border-radius: 7px;
+    border: 1.5px solid @color6;
+}
+
+#custom-separator {
+    padding: 0 10px;
+    color: @foreground;
+}
+
+#custom-menu {
+    padding-left: 15px;
+    color: @color2;
+}
+
+#cpu {
+    padding-right: 10px;
+    color: @color3;
+}
+
+#memory {
+    padding-right: 10px;
+    color: @color4;
+}
+
+#battery {
+    color: @color6;
+}
+
+#custom-wallpaper,
+#custom-vpn {
+    color: @color8
+}
+
+#tray {
+    color: @foreground;
+    padding-right: 15px;
+}
+
+#tray menu {
+    background-color: @background;
+    color: @foreground;
+}
+
+#tray menu :disabled {
+    color: @color1;
+}
+
+#tray menu :hover {
+    background-color: @foreground;
+    color: @background;
+}
+
+tooltip {
+    background-color: @background;
+    border-color: @color6;
+}
+
+tooltip label {
+    color: @foreground;
+}
+
+.modules-center {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#workspaces button {
+    all: unset;
+    padding: 10px;
+    color: @color6;
+}
+
+#workspaces button.empty {
+    color: @color1;
+}
+
+#workspaces button.active {
+    color: @color11;
+}
+
+
+.modules-right {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#custom-spotify {
+    color: @color2;
+}
+
+#pulseaudio {
+    color: @color4;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 5px;
+    min-width: 70px;
+    border-radius: 5px;
+    border: 0px solid;
+    background-color: @color1;
+}
+
+#pulseaudio-slider highlight {
+    all: unset;
+    border-radius: 5px;
+    border: 0px solid;
+    background-color: @color2;
+}
+
+#clock {
+    color: @foreground;
+}
